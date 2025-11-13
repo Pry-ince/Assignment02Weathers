@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.weathers.app-mergeDebugResources-33:/layout/activity_main.xml",
+        "source": "com.example.weathers.app-main-36:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.weathers.app-mergeDebugResources-33:/layout/item_city.xml",
+        "source": "com.example.weathers.app-main-36:/layout/item_city.xml"
+    }
+]

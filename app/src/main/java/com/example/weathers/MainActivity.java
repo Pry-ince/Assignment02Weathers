@@ -1,6 +1,12 @@
 package com.example.weathers;
 
+import android.content.Intent;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.weathers.databinding.ActivityMainBinding;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,11 +15,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Inflate the layout using ViewBinding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-//This is an new weathers app
-        // You can now access UI elements directly through binding, e.g.
-        // binding.textView.setText("Hello Weather!");
+
+        List<City> cities = Arrays.asList(
+                new City("Toronto", "Toronto"),
+                new City("Montreal", "Montreal"),
+                new City("Barrie", "Barrie")
+        );
+
+        CityAdapter adapter = new CityAdapter(cities, city -> {
+            // we can handle the click in thw next steps
+        });
+
+        binding.rvCities.setLayoutManager(new LinearLayoutManager(this));
+        binding.rvCities.setAdapter(adapter);
     }
 }
