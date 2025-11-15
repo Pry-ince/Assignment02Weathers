@@ -4,10 +4,17 @@ color black
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id btnBack
 id rvCities
+id tvCity
 id tvCityName
+id tvCondition
+id tvTempC
+id tvTempF
 id tvTitle
+id tvWindChill
 layout activity_main
+layout activity_weather_detail
 layout item_city
 mipmap ic_launcher
 mipmap ic_launcher_round

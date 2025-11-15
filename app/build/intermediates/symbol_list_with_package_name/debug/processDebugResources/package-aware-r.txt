@@ -3757,6 +3757,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnBack
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -4148,8 +4149,13 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvCity
 id tvCityName
+id tvCondition
+id tvTempC
+id tvTempF
 id tvTitle
+id tvWindChill
 id unchecked
 id uniform
 id unlabeled
@@ -4293,6 +4299,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_weather_detail
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

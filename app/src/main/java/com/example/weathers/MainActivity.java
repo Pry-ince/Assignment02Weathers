@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
         );
 
         CityAdapter adapter = new CityAdapter(cities, city -> {
-            // we can handle the click in thw next steps
+            Intent intent = new Intent(MainActivity.this, WeatherDetailActivity.class);
+            intent.putExtra("city", city.getQuery());
+            startActivity(intent);
         });
 
         binding.rvCities.setLayoutManager(new LinearLayoutManager(this));
