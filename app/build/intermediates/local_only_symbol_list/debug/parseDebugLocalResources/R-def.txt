@@ -1,0 +1,23 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id backButton
+id conditionTextView
+id locationNameTextView
+id locationsRecyclerView
+id temperatureCTextView
+id temperatureFTextView
+id windChillTextView
+layout activity_detail
+layout activity_main
+layout location_list_item
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Weathers
+style Theme.Weathers
+xml backup_rules
+xml data_extraction_rules

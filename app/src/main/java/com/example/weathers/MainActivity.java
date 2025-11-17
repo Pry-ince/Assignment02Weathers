@@ -1,5 +1,9 @@
 package com.example.weathers;
 
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.weathers.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -7,13 +11,14 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        // Inflate the layout using ViewBinding
+
+        // Inflate layout using ViewBinding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-//This is an new weathers app
-        // You can now access UI elements directly through binding, e.g.
+
+        // You can now use binding to access UI elements, e.g.,
         // binding.textView.setText("Hello Weather!");
     }
 }

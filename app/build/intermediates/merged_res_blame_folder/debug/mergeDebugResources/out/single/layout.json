@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.weathers.app-mergeDebugResources-34:/layout/activity_detail.xml",
+        "source": "com.example.weathers.app-main-37:/layout/activity_detail.xml"
+    },
+    {
+        "merged": "/Users/prince/.gradle/daemon/8.13/com.example.weathers.app-mergeDebugResources-34:/layout/activity_detail.xml",
+        "source": "/Users/prince/.gradle/daemon/8.13/com.example.weathers.app-main-37:/layout/activity_detail.xml"
+    },
+    {
+        "merged": "/Users/prince/.gradle/daemon/8.13/com.example.weathers.app-mergeDebugResources-34:/layout/location_list_item.xml",
+        "source": "/Users/prince/.gradle/daemon/8.13/com.example.weathers.app-main-37:/layout/location_list_item.xml"
+    },
+    {
+        "merged": "/Users/prince/.gradle/daemon/8.13/com.example.weathers.app-mergeDebugResources-34:/layout/activity_main.xml",
+        "source": "/Users/prince/.gradle/daemon/8.13/com.example.weathers.app-main-37:/layout/activity_main.xml"
+    }
+]
