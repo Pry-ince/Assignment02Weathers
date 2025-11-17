@@ -12,7 +12,7 @@ import retrofit2.Response;
 public class DetailView extends ViewModel {
 
     private final MutableLiveData<WeatherData> weatherLiveData = new MutableLiveData<>();
-    private WeatherService weatherService;
+    private final WeatherService weatherService;
 
     public DetailView() {
         Retrofit retrofit = new Retrofit.Builder()
@@ -27,9 +27,10 @@ public class DetailView extends ViewModel {
     }
 
     public void fetchWeatherForLocation(String location) {
-        String apiKey = "YOUR_API_KEY"; // Replace with your weatherapi.com API key
+        String apiKey = "b2d25ea5c56a450bafc114605251711";
 
         Call<WeatherResponse> call = weatherService.getCurrentWeather(apiKey, location);
+
         call.enqueue(new Callback<WeatherResponse>() {
             @Override
             public void onResponse(Call<WeatherResponse> call, Response<WeatherResponse> response) {
@@ -48,7 +49,7 @@ public class DetailView extends ViewModel {
 
             @Override
             public void onFailure(Call<WeatherResponse> call, Throwable t) {
-                // Handle error, optionally post error state
+                // Log error or notify UI about failure
             }
         });
     }
