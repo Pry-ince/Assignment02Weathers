@@ -4,6 +4,7 @@ package com.example.weathers.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,10 +23,14 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final RecyclerView locationsRecyclerView;
 
+  @NonNull
+  public final TextView screenTitle;
+
   private ActivityMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView locationsRecyclerView) {
+      @NonNull RecyclerView locationsRecyclerView, @NonNull TextView screenTitle) {
     this.rootView = rootView;
     this.locationsRecyclerView = locationsRecyclerView;
+    this.screenTitle = screenTitle;
   }
 
   @Override
@@ -61,7 +66,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, locationsRecyclerView);
+      id = R.id.screenTitle;
+      TextView screenTitle = ViewBindings.findChildViewById(rootView, id);
+      if (screenTitle == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, locationsRecyclerView,
+          screenTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -3548,6 +3548,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable cloudy_sky
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3782,6 +3783,7 @@ id clockwise
 id closest
 id collapseActionView
 id compress
+id conditionSummaryTextView
 id conditionTextView
 id confirm_button
 id constraint
@@ -3795,6 +3797,7 @@ id cos
 id counterclockwise
 id cradle
 id currentState
+id currentTempTextView
 id custom
 id customPanel
 id cut
@@ -3874,6 +3877,7 @@ id header_title
 id hidden
 id hide_ime_id
 id hideable
+id highLowTextView
 id home
 id homeAsUp
 id honorRequest
@@ -4044,6 +4048,7 @@ id save_overlay_view
 id sawtooth
 id scale
 id screen
+id screenTitle
 id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp

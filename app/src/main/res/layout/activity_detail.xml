@@ -2,63 +2,90 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#FFFFFF">
+    android:background="#36454F"
+    android:padding="16dp">
 
+    <!-- Back Button (Top Left, if you want it higher) -->
+<Button
+android:id="@+id/backButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Back"
+android:textColor="@android:color/white"
+style="@style/Widget.AppCompat.Button.Borderless"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/locationNameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+    <!-- 1. Location Name (Centered) -->
+<TextView
+android:id="@+id/locationNameTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textSize="38sp"
+android:textStyle="bold"
+android:textColor="@android:color/white"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintVertical_chainStyle="packed"
+android:layout_marginTop="100dp"
+tools:text="Waterloo" />
 
-    <TextView
-        android:id="@+id/temperatureCTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Temp in °C"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/locationNameTextView"
-        app:layout_constraintStart_toStartOf="parent" />
+    <!-- 2. Temperature C (Massive and Centered) -->
+<TextView
+android:id="@+id/temperatureCTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textSize="110sp"
+    android:textColor="@android:color/white"
+    app:layout_constraintTop_toBottomOf="@id/locationNameTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/conditionTextView"
+    tools:text="4°C" />
 
-    <TextView
-        android:id="@+id/temperatureFTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Temp in °F"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/temperatureCTextView"
-        app:layout_constraintStart_toStartOf="parent" />
+    <!-- 3. Condition Summary (Centered, Below Temp) -->
+<TextView
+android:id="@+id/conditionTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Weather Condition"
+android:textSize="20sp"
+android:textColor="@android:color/white"
+app:layout_constraintTop_toBottomOf="@id/temperatureCTextView"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+tools:text="Windy and Cloudy" />
 
-    <TextView
-        android:id="@+id/conditionTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Weather Condition"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/temperatureFTextView"
-        app:layout_constraintStart_toStartOf="parent" />
+    <!-- 4. Temperature F (Detailed Line, Centered) -->
+<TextView
+android:id="@+id/temperatureFTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Temp in °F"
+android:textColor="#C7C7C7"
+android:textSize="18sp"
+android:layout_marginTop="8dp"
+app:layout_constraintTop_toBottomOf="@id/conditionTextView"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+tools:text="29°F | Feels Like: 25°F" />
 
-    <TextView
-        android:id="@+id/windChillTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wind Chill"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/conditionTextView"
-        app:layout_constraintStart_toStartOf="parent" />
+    <!-- 5. Wind Chill (Below the rest) -->
+<TextView
+android:id="@+id/windChillTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Wind Chill: 0°C"
+android:textColor="#C7C7C7"
+android:textSize="16sp"
+android:layout_marginTop="16dp"
+app:layout_constraintTop_toBottomOf="@id/temperatureFTextView"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@ import com.example.weathers.databinding.ActivityDetailBinding;
 public class DetailActivity extends AppCompatActivity {
 
     private ActivityDetailBinding binding;
-    private DetailView viewModel;
+    private DetailViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,12 +19,12 @@ public class DetailActivity extends AppCompatActivity {
 
         String locationName = getIntent().getStringExtra("locationName");
 
-        viewModel = new ViewModelProvider(this).get(DetailView.class);
+        viewModel = new ViewModelProvider(this).get(DetailViewModel.class);
 
         // Add observer to LiveData
-        viewModel.getWeatherLiveData().observe(this, new Observer<DetailView.WeatherData>() {
+        viewModel.getWeatherLiveData().observe(this, new Observer<DetailViewModel.WeatherData>() {
             @Override
-            public void onChanged(DetailView.WeatherData weatherData) {
+            public void onChanged(DetailViewModel.WeatherData weatherData) {
                 if (weatherData != null) {
                     binding.locationNameTextView.setText(weatherData.locationName);
                     binding.temperatureCTextView.setText(weatherData.tempCelsius + " °C");

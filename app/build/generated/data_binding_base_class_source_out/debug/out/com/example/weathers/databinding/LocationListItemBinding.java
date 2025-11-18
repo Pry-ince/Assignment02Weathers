@@ -7,27 +7,43 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.weathers.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class LocationListItemBinding implements ViewBinding {
   @NonNull
-  private final TextView rootView;
+  private final CardView rootView;
+
+  @NonNull
+  public final TextView conditionSummaryTextView;
+
+  @NonNull
+  public final TextView currentTempTextView;
+
+  @NonNull
+  public final TextView highLowTextView;
 
   @NonNull
   public final TextView locationNameTextView;
 
-  private LocationListItemBinding(@NonNull TextView rootView,
-      @NonNull TextView locationNameTextView) {
+  private LocationListItemBinding(@NonNull CardView rootView,
+      @NonNull TextView conditionSummaryTextView, @NonNull TextView currentTempTextView,
+      @NonNull TextView highLowTextView, @NonNull TextView locationNameTextView) {
     this.rootView = rootView;
+    this.conditionSummaryTextView = conditionSummaryTextView;
+    this.currentTempTextView = currentTempTextView;
+    this.highLowTextView = highLowTextView;
     this.locationNameTextView = locationNameTextView;
   }
 
   @Override
   @NonNull
-  public TextView getRoot() {
+  public CardView getRoot() {
     return rootView;
   }
 
@@ -48,12 +64,38 @@ public final class LocationListItemBinding implements ViewBinding {
 
   @NonNull
   public static LocationListItemBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.conditionSummaryTextView;
+      TextView conditionSummaryTextView = ViewBindings.findChildViewById(rootView, id);
+      if (conditionSummaryTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.currentTempTextView;
+      TextView currentTempTextView = ViewBindings.findChildViewById(rootView, id);
+      if (currentTempTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.highLowTextView;
+      TextView highLowTextView = ViewBindings.findChildViewById(rootView, id);
+      if (highLowTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.locationNameTextView;
+      TextView locationNameTextView = ViewBindings.findChildViewById(rootView, id);
+      if (locationNameTextView == null) {
+        break missingId;
+      }
+
+      return new LocationListItemBinding((CardView) rootView, conditionSummaryTextView,
+          currentTempTextView, highLowTextView, locationNameTextView);
     }
-
-    TextView locationNameTextView = (TextView) rootView;
-
-    return new LocationListItemBinding((TextView) rootView, locationNameTextView);
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

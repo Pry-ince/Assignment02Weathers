@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Text items for each location-->
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/locationNameTextView"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:textSize="18sp"
-    android:textColor="@android:color/black" />
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#2C2C2E"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:padding="20dp"> <!-- Generous internal padding -->
+
+<!-- 1. Location Name (Left, Bold) -->
+<TextView
+    android:id="@+id/locationNameTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@android:color/white"
+    android:textSize="22sp"
+    android:textStyle="bold"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:text="Toronto" />
+
+<TextView
+    android:id="@+id/conditionSummaryTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#AAAAAA"
+android:textSize="14sp"
+app:layout_constraintTop_toBottomOf="@id/locationNameTextView"
+app:layout_constraintStart_toStartOf="parent"
+android:layout_marginTop="4dp"
+tools:text="8:17 AM | Expect light rain" />
+
+<!-- 3. Current Temperature (Right, Large) -->
+<TextView
+    android:id="@+id/currentTempTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@android:color/white"
+    android:textSize="40sp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:text="4°" />
+
+<!-- 4. High/Low (Right, Below Temp) -->
+<TextView
+    android:id="@+id/highLowTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#AAAAAA"
+    android:textSize="14sp"
+    app:layout_constraintTop_toBottomOf="@id/currentTempTextView"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:text="H:9° L:4°" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>

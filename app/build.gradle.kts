@@ -4,7 +4,7 @@ plugins {
 
 android {
     buildFeatures {
-        viewBinding = true
+        buildFeatures.viewBinding = true
     }
 
 
@@ -38,14 +38,10 @@ android {
 
 dependencies {
 // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel:2.9.4")
-// LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata:2.9.4")
-// Lifecycle components (optional but recommended for ViewModel and LiveData)
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.4")
-
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    //this line
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
     implementation(libs.appcompat)
     implementation(libs.material)
