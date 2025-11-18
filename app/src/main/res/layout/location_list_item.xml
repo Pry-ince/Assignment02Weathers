@@ -15,9 +15,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
-android:padding="20dp"> <!-- Generous internal padding -->
+android:padding="20dp">
 
-<!-- 1. Location Name (Left, Bold) -->
+<!--Location Name (Left, Bold) -->
 <TextView
     android:id="@+id/locationNameTextView"
     android:layout_width="wrap_content"
@@ -40,7 +40,7 @@ app:layout_constraintStart_toStartOf="parent"
 android:layout_marginTop="4dp"
 tools:text="8:17 AM | Expect light rain" />
 
-<!-- 3. Current Temperature (Right, Large) -->
+<!-- Current Temperature (Right, Large) -->
 <TextView
     android:id="@+id/currentTempTextView"
     android:layout_width="wrap_content"
@@ -51,7 +51,7 @@ tools:text="8:17 AM | Expect light rain" />
     app:layout_constraintEnd_toEndOf="parent"
     tools:text="4°" />
 
-<!-- 4. High/Low (Right, Below Temp) -->
+<!-- High/Low (Right, Below Temp) -->
 <TextView
     android:id="@+id/highLowTextView"
     android:layout_width="wrap_content"

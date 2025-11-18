@@ -8,7 +8,7 @@
     android:background="#36454F"
     android:padding="16dp">
 
-    <!-- Back Button (Top Left, if you want it higher) -->
+
 <Button
 android:id="@+id/backButton"
 android:layout_width="wrap_content"
@@ -20,7 +20,7 @@ app:layout_constraintTop_toTopOf="parent"
 app:layout_constraintStart_toStartOf="parent"
 android:layout_marginTop="16dp" />
 
-    <!-- 1. Location Name (Centered) -->
+
 <TextView
 android:id="@+id/locationNameTextView"
 android:layout_width="wrap_content"

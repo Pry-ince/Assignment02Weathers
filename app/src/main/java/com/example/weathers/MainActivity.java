@@ -31,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
         sampleLocations.add(new Location("Montreal"));
         sampleLocations.add(new Location("Barrie"));
 
-        //INITIALIZE and ATTACH ADAPTER
+
         LocationAdapter adapter = new LocationAdapter(sampleLocations, location -> {
-            // 🚨 THIS IS THE CODE THAT OPENS THE DETAIL PAGE
+
             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-            intent.putExtra("locationName", location.getName()); // Pass the location name
+            intent.putExtra("locationName", location.getName());
             startActivity(intent);
         });
 
-        // 4. SET THE ADAPTER to the RecyclerView
+        // SET THE ADAPTER to the RecyclerView
         binding.locationsRecyclerView.setAdapter(adapter);
     }
 }
